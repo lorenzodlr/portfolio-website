@@ -1,0 +1,212 @@
+.portfolio {
+    animation-name: slideToLeftAppear;
+    animation-duration: 1.75s;
+    animation-fill-mode: forwards;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio h2 {
+    margin: 20px 0 10px;
+}
+
+.portfolio h3 {
+    text-align: center;
+}
+
+.portfolio a {
+    color: white;
+    cursor: pointer;
+    transition: color 0.4s;
+}
+
+.portfolio a:hover {
+    color: rgb(18, 97, 28);
+}
+
+.portfolio .portfolio-container {
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio .work-container {
+    text-align: center;
+    margin-top: 15px;
+    overflow-x: hidden;
+    width: 90%;
+    transition: background-color 1.5s, color 1s;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 2.5% 3%;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.portfolio .work-container p {
+    padding: 0 5%;   
+}
+
+.portfolio .active-container {
+    background-color: white;
+    color: black;
+}
+
+.portfolio .active-container a {
+    color: black;
+}
+
+.work-container .img-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 2500;
+    -webkit-perspective: 2500;
+    position: relative;
+}
+
+.img-container .loading-animation {
+    display: inline-flex;
+    width: 35%;
+    justify-content: space-between;
+}
+
+.img-container .loading-dot {
+    height: 30px;
+    width: 30px;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.work-container .slideshow-img, .work-container .cover-img {
+    width: 110%;
+    height: auto;
+}
+
+/* Animation classes */
+.bounce {
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.slide-img-in-right {
+    animation-name: slideImgInFromRight;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+.slide-img-out-right {
+    animation-name: slideImgOutToRight;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+.slide-img-in-left {
+    animation-name: slideImgInFromLeft;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+.slide-img-out-left {
+    animation-name: slideImgOutToLeft;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideImgInFromRight {
+    from {
+        -webkit-transform: translate3d(400px, 0, -3000px);
+        -moz-transform: translate3d(400px, 0, -3000px);
+        -o-transform: translate3d(400px, 0, -3000px);
+        -ms-transform: translate3d(400px, 0, -3000px);
+        transform: translate3d(400px, 0, -3000px);
+        opacity: 0;
+        border-radius: 4px;
+    }
+    to {
+        transform: translateX(0px);
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+        border-radius: 4px;
+    }
+}
+@keyframes slideImgOutToRight {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translate3d(400px, 0, -3000px);
+        -moz-transform: translate3d(400px, 0, -3000px);
+        -o-transform: translate3d(400px, 0, -3000px);
+        -ms-transform: translate3d(400px, 0, -3000px);
+        transform: translate3d(400px, 0, -3000px);
+        opacity: 0;
+    }
+}
+@keyframes slideImgInFromLeft {
+    from {
+        -webkit-transform: translate3d(-400px, 0, -3000px);
+        -moz-transform: translate3d(-400px, 0, -3000px);
+        -o-transform: translate3d(-400px, 0, -3000px);
+        -ms-transform: translate3d(-400px, 0, -3000px);
+        transform: translate3d(-400px, 0, -3000px);
+    }
+    to {
+        transform: translateX(0px);
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes slideImgOutToLeft {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translate3d(-400px, 0, -3000px);
+        -moz-transform: translate3d(-400px, 0, -3000px);
+        -o-transform: translate3d(-400px, 0, -3000px);
+        -ms-transform: translate3d(-400px, 0, -3000px);
+        transform: translate3d(-400px, 0, -3000px);
+        opacity: 0;
+    }
+}
+@keyframes bounce {
+    0% { transform: translateY(0px) }
+    16.665% { transform: translateY(-10px) }
+    33.33% { transform: translateY(0px) }
+    100% { transform: translateY(0px) }
+}
+
+/* media queries */
+@media screen and (max-width: 700px) {
+    .portfolio {
+        margin-bottom: 50px;
+    }
+}

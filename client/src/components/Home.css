@@ -1,0 +1,246 @@
+.home {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+.home .logo {
+    margin-top: -1px;
+    width: 220px;
+    position: relative;
+    /* visibility: hidden; */
+}
+
+.home .logo h3 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.home .logo .line-1, .home-logo .line-1 {
+    width: 202px;
+    background-color: white;
+    height: 100%;
+}
+
+.home .logo .line-2 {
+    width: 18px;
+    margin-left: 5px;
+    height: 100%;
+    background-color: rgb(18, 97, 28);
+}
+
+.home .home-logo {
+    width: 220px;
+    height: 68px;
+}
+
+.home .home-logo .letter-container {
+    display: inline-flex;
+    font-size: 44px;
+    position: relative;
+    bottom: 1px;
+    left: 3px;
+    opacity: 0;
+}
+
+.home-logo h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.home-logo .underline {
+    height: 9px;
+    display: inline-flex;
+    position: relative;
+    bottom: 14px;
+}
+
+.home-logo .line-2 {
+    width: 18px;
+    margin-left: 5px;
+    height: 100%;
+    background-color: white;
+    transition: background-color 0.5s;
+}
+
+.home h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 45px;
+}
+
+.home a {
+    display: block;
+    text-align: center;
+    transition: font-size 0.5s, top 0.5s;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+.home-content {
+    animation-name: slideToLeftAppear;
+    animation-duration: 1.75s;
+    animation-fill-mode: forwards;
+    position: relative;
+}
+
+.home-content .btn-container {
+    height: 32px;
+    margin: 60px 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.home-content .btn-container .anchor-ref {
+    opacity: 0.5;
+    font-size: 12px;
+    position: relative;
+    top: 0px;
+}
+
+.home-content .btn-container .active {
+    opacity: 1;
+    font-size: 18px;
+}
+
+.home-content .submit-anchor {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 20px;
+    margin-top: 50px;
+    color: rgb(18, 97, 28);
+    transition: left 3s;
+}
+
+.home-content img {
+    filter: invert(27%) sepia(10%) saturate(7160%) hue-rotate(90deg) brightness(90%) contrast(87%);
+    height: 24px;
+    width: 24px;
+    position: relative;
+    transition: transform 0.4s;
+    margin-left: -1px;
+    top: 1px;
+}
+
+.home-content .submit-anchor:hover > img {
+    transform: translateX(5px);
+}
+
+/* Animation classes */
+
+.animate-logo {
+    animation: logoAnimation;
+    animation-duration: 1.75s;
+    animation-delay: 0.25s;
+    animation-fill-mode: forwards;
+}
+
+.animate-underline {
+    animation: underlineAnimation2;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.animate-letter {
+    animation: letterAnimation;
+    animation-duration: 0.75s;
+    animation-fill-mode: forwards;
+}
+
+.animate-underline-2 {
+    animation: underline2Animation;
+    animation-duration: 1.75s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes logoAnimation {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes underlineAnimation2 {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes letterAnimation {
+    0% {
+        color: white;
+        position: relative;
+        bottom: 0px;
+    }
+    50% {
+        color: rgb(18, 97, 28);
+        position: relative;
+        bottom: 10px;
+    }
+    100% {
+        color: white;
+        position: relative;
+        bottom: 0px;
+    }
+}
+@keyframes underline2Animation {
+    0% {
+        transform: translateX(0px);
+    }
+    10% {
+        transform: translateX(-2px);
+    }
+    20% {
+        transform: translateX(2px);
+    }
+    30% {
+        transform: translateX(-2px);
+    }
+    40% {
+        transform: translateX(2px);
+    }
+    50% {
+        transform: translateX(0px);
+    }
+    60% {
+        transform: translateY(5px);
+    }
+    78% {
+        transform: translateY(-20px);
+    }
+    88% {
+        transform: translateY(3px);
+    }
+    95% {
+        transform: translateY(0px);
+    }
+}
+
+/* Animation end */
+
+@media screen and (min-width: 600px) {
+    .home-content .btn-container .anchor-ref {
+        font-size: 16px;
+    }
+    .home-content .btn-container .active {
+        font-size: 22px;
+    }
+    .home-content .submit-anchor {
+        font-size: 22px;
+    }
+}

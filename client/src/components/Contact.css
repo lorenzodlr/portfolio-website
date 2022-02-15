@@ -1,0 +1,155 @@
+.contact {
+    position: relative;
+    animation-name: slideToLeftAppear;
+    animation-duration: 1.75s;
+    animation-fill-mode: forwards;
+}
+
+.contact .email-container {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+}
+
+.email-container .email {
+    margin-left: 10px;
+    text-decoration: underline;
+}
+
+.contact img {
+    height: 18px;
+    width: 18px;
+    filter: invert(98%) sepia(1%) saturate(912%) hue-rotate(210deg) brightness(123%) contrast(100%);
+    margin-left: 5px;
+    cursor: pointer;
+    transition: filter 0.3s;
+}
+
+.contact img:hover {
+    filter: invert(32%) sepia(31%) saturate(1092%) hue-rotate(77deg) brightness(87%) contrast(100%);
+}
+
+.contact p {
+    font-size: 15px;
+}
+
+.contact .clipboard-success {
+    color: rgb(18, 97, 28);
+    font-size: 20px;
+    position: absolute;
+    top: -35px;
+    width: 100%;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.contact .slideFromTop {
+    animation-name: slideFromTop;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+.contact form {
+    margin-top: 20px;
+}
+
+.contact h6 {
+    margin: 0;
+    margin-bottom: 7px;
+}
+
+.contact input {
+    margin-bottom: 20px;
+    width: 300px;
+    font-size: 15px;
+    padding: 3px 5px;
+    outline: none;
+    border-radius: 4px;
+    border: none;
+}
+
+.contact input:focus {
+    border: 2px solid rgb(18, 97, 28);
+    margin: -1px 0 18px -1px;
+}
+
+.contact textarea {
+    resize: none;
+    width: 90%;
+    height: 200px;
+    max-width: 600px;
+    font-size: 15px;
+    font-family: 'Manrope';
+    padding: 1%;
+    outline: none;
+    border-radius: 4px;
+}
+
+.contact textarea:focus {
+    border: 2px solid rgb(18, 97, 28);
+    margin: -1px 0 -1px -1px;
+}
+
+.contact button {
+    display: block;
+    margin-top: 7px;
+    border-radius: 4px;
+    border: 1px solid rgb(18, 97, 28);
+    color: rgb(18, 97, 28);
+    background-color: transparent;
+    text-align: center;
+    width: 100px;
+    padding: 3px 0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.contact button:hover {
+    background-color: rgb(18, 97, 28);
+    color: black;
+}
+
+.contact form .error, .contact form .error-2 {
+    color: #db0d0d;
+    display: none;
+}
+
+.contact form .success {
+    color:rgb(18, 97, 28);
+    display: none;
+}
+
+@keyframes slideFromTop {
+    0% {
+        transform: translateY(-25px);
+        visibility: hidden;
+        opacity: 0;
+    }
+    20% {
+        transform: translateY(0px);
+        visibility: visible;
+        opacity: 1;
+    }
+    40% {
+        transform: translateY(0px);
+        visibility: visible;
+        opacity: 1;
+    }
+    60% {
+        transform: translateY(0px);
+        visibility: visible;
+        opacity: 1;
+    }
+    80% {
+        transform: translateY(0px);
+        visibility: visible;
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-25px);
+        visibility: hidden;
+        opacity: 0;
+    }
+}

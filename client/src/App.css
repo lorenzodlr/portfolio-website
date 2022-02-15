@@ -1,0 +1,231 @@
+html, .App, div {
+  scroll-behavior: smooth;
+}
+
+.App {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: white;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  font-family: 'Manrope';
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+button, input {
+  font-family: 'Manrope';
+}
+
+.nav-container .nav-btn a {
+  color: white;
+  transition: color 0.24s;
+  text-decoration: none;
+}
+
+.nav-btn {
+  font-size: 17px;
+  margin-right: 3%;
+}
+
+.animated-underline {
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  opacity: 0;
+}
+
+.nav-btn:hover > .animated-underline {
+  animation-name: underlineAnimation;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+
+.contact-anchor {
+  background-color: white;
+  border: 1px solid white;
+  color: black;
+  padding: 0 15px;
+  transition-property: background-color, color;
+  transition-duration: 0.5s;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.contact-anchor:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  margin: -1px;
+  text-decoration: underline;
+}
+
+.main-container {
+  width: 90%;
+  max-width: 1100px;
+  position: relative;
+}
+
+.header {
+  position: relative;
+  border-bottom: 1px solid white;
+  width: 100%;
+  padding: 20px 0 15px;
+  height: 75px;
+  /* total height: 110px */
+}
+
+.logo {
+  width: 104px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.logo .text {
+  display: inline-flex;
+  justify-content: space-between;
+  font-size: 20px;
+  padding-left: 1px;
+}
+
+.logo .underline {
+  width: 100%;
+  display: inline-flex;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 5px;
+}
+
+.logo .line-1 {
+  height: 100%;
+  width: 92px;
+  background-color: white;
+}
+
+.logo .line-2 {
+  margin-left: 3px;
+  height: 100%;
+  width: 8px;
+  background-color: rgb(18, 97, 28);
+}
+
+h3 {
+  margin: 0;
+  margin-left: 1%;
+}
+
+h5 {
+  margin: 0;
+}
+
+p {
+  font-size: 14px;
+}
+
+.nav-container {
+  position: relative;
+  width: 100%;
+}
+
+.navigation {
+  display: inline-flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 7px;
+  padding-left: 0.5%;
+}
+
+.home-icon, .ig-logo {
+  height: 25px;
+  width: auto;
+  filter: invert(98%) sepia(1%) saturate(912%) hue-rotate(210deg) brightness(123%) contrast(100%);
+  position: relative;
+  bottom: 0;
+  transition: bottom 0.35s;
+}
+
+.home-anchor {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.home-anchor img {
+  transition: bottom 0.4s;
+  position: relative;
+}
+
+.home-anchor:hover > img {
+  bottom: 5px;
+}
+
+.footer {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid white;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  margin-top: 50px;
+}
+
+.footer a {
+  cursor: pointer;
+  position: relative;
+  top: 2px;
+}
+
+.footer a:hover > .animated-underline {
+  animation-name: slideToRightAppear;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+
+@keyframes underlineAnimation {
+  0% {
+    transform: translateX(25px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes bounce {
+  0% { transform: translateY(0px) }
+  16.665% { transform: transateY(-4px) }
+  33.33% { transform: translateY(0px) }
+  100% { transform: translateY(0px) }
+}
+@keyframes slideToLeftAppear {
+  from {
+      transform: translateX(40px);
+      opacity: 0;
+      visibility: hidden;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
+  }
+}
+@keyframes slideToRightAppear {
+  from {
+      transform: translateX(-13px);
+      opacity: 0;
+      visibility: hidden;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
+  }
+}

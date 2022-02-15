@@ -1,0 +1,10 @@
+.about {
+    position: relative;
+    animation-name: slideToLeftAppear;
+    animation-duration: 1.75s;
+    animation-fill-mode: forwards;
+}
+
+.about p {
+    font-size: 15px;
+}
